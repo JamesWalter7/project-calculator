@@ -1,0 +1,86 @@
+body {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-body{
+    background-color: darkgray;
+    outline: 2px solid rgb(216, 253, 253);
+    margin-top: 100px;
+    height: 675px;
+    width: 400px;
+    border-radius: 15px;
+}
+.display {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(7, 81, 243);
+    height: 130px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 4px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    font-size: 20px;
+}
+.upper-display{
+    height: 86px;
+    display: flex;
+    justify-content: center;
+}
+.lower-display{
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.buttons-body{
+    background-color: rgb(91, 100, 94);
+    display: flex;
+    height: 470px;
+}
+.numbers{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 10px;
+}
+.operators{
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-left: -5px;
+    gap: 3px;
+}
+button{
+    width: 90px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color:aquamarine;
+}
+
+.operators 
+button {
+    background-color:rgb(132, 193, 196);
+}
+
+.dot, .equal {
+    background-color: darkseagreen;
+}
+#clear {
+    width: 376px;
+    margin-left: 10px;
+    height: 50px;
+    background-color: darkcyan;
+}
+.extras{
+    padding-bottom: 10px;
+    background-color: rgb(91, 100, 94);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
