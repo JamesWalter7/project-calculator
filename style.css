@@ -1,86 +1,65 @@
-body {
-    background-color: gray;
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+html, body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #23272A;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.main-body{
-    background-color: darkgray;
-    outline: 2px solid rgb(216, 253, 253);
-    margin-top: 100px;
-    height: 675px;
-    width: 400px;
-    border-radius: 15px;
-}
-.display {
+#calculator{
+    height: 70vh;
+    width: 50vh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(7, 81, 243);
-    height: 130px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin: 4px;
-    margin-bottom: 10px;
-    justify-content: center;
+    border: 1px solid black;
+}
+#display{
+    flex: 1;
+    background-color: #FfFfFf;
+    display: flex;
     align-items: center;
-    color: wheat;
-    font-size: 20px;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: x-large;
 }
-.upper-display{
-    height: 86px;
+#body-wrapper{
+    flex: 3;
     display: flex;
-    justify-content: center;
+    outline: 1px solid black;
 }
-.lower-display{
-    height: 44px;
+#body-left{
+    flex: 3;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
 }
-.buttons-body{
-    background-color: rgb(91, 100, 94);
+#upper-row{
+    flex: 1;
     display: flex;
-    height: 470px;
 }
-.numbers{
-    width: 300px;
+#numbers{
+    flex: 2.98;
     display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-    margin: 10px;
+    flex-direction: column;
 }
-.operators{
-    width: 100px;
+.num-rows{
     display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
-    margin-left: -5px;
-    gap: 3px;
+    flex: 1;
+}
+#body-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 button{
-    width: 90px;
-    border-radius: 10px;
-    font-size: 30px;
-    background-color:aquamarine;
-}
-
-.operators 
-button {
-    background-color:rgb(132, 193, 196);
-}
-
-.dot, .equal {
-    background-color: darkseagreen;
-}
-#clear {
-    width: 376px;
-    margin-left: 10px;
-    height: 50px;
-    background-color: darkcyan;
-}
-.extras{
-    padding-bottom: 10px;
-    background-color: rgb(91, 100, 94);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    flex: 1;
+    border-radius: 0;
+    font-size:xx-large;
+    font-weight: 600;
+    background-color:mintcream;
 }
