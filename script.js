@@ -58,7 +58,11 @@ function delete_char_from_number_strings() {
     }else if(output_string[output_string.length-1] == ' '){
         //below line removes the space and the last but one line in this function removes the character.
         output_string = output_string.slice(0, -1);
-        ;
+        if(is_operator(output_string[output_string.length-1])) {
+            operator = operator.slice(0, -1);
+        }else{
+            num_a = num_a.slice(0, -1);
+        }
     }else if(is_operator(output_string[output_string.length -1])){
         operator = operator.slice(0, -1);
     }else if(operator.length == 0) {
