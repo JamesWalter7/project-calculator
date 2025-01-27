@@ -116,9 +116,11 @@ function add_char_to_number_strings(ch) {
         
         //if number is made negative then don't add another - sign to it at the start
         if(num_a.length == 1 && num_a[0] == '-' && ch == '-') return;
+        if(ch == '.' && num_a.includes('.')) return;
         num_a += ch;
     }else{
         if(num_b.length == 1 && num_b[0] == '-' && ch == '-') return;
+        if(ch == '.' && num_b.includes('.')) return;
         num_b += ch;
     }
 }
