@@ -20,7 +20,7 @@ buttons.forEach((button) => {
             compute();
         }else if(is_operator(val)){
             //ensures if a minus sign is entered as a negative sign or as an operator
-            if(val == '-' && (operator.length != 0 || num_a.length == 0 || num_a[0] == '-' || num_b[0] == '-')) {
+            if(val == '-' && ((operator.length != 0 && num_b.length == 0) || num_a.length == 0 || num_a[0] == '-' || num_b[0] == '-')) {
                 if(add_char_to_number_strings(val) == true) {
                     output_string += val;
                     update_display();
