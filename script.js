@@ -21,9 +21,10 @@ buttons.forEach((button) => {
         }else if(is_operator(val)){
             //ensures if a minus sign is entered as a negative sign or as an operator
             if(val == '-' && (operator.length != 0 || num_a.length == 0 || num_a[0] == '-' || num_b[0] == '-')) {
-                add_char_to_number_strings(val);
-                output_string += val;
-                update_display();
+                if(add_char_to_number_strings(val) == true) {
+                    output_string += val;
+                    update_display();
+                }
             }else{
                 if(num_a.length != 0 && num_b.length != 0 && operator.length != 0) {
                     compute();
@@ -33,11 +34,10 @@ buttons.forEach((button) => {
                 operator = val;
             }
         }else if(val == '.' ||val == '0'|| is_number(val)){
-
-            output_string += val;
-            update_display();
-
-            add_char_to_number_strings(val);
+            if(add_char_to_number_strings(val) == true) {
+                output_string += val;
+                update_display();
+            }
         }
         console.log(`val: ${val} type: ${typeof val}`);
         log_values();
@@ -115,14 +115,15 @@ function add_char_to_number_strings(ch) {
     if(operator == '') {
         
         //if number is made negative then don't add another - sign to it at the start
-        if(num_a.length == 1 && num_a[0] == '-' && ch == '-') return;
-        if(ch == '.' && num_a.includes('.')) return;
+        if(num_a.length == 1 && num_a[0] == '-' && ch == '-') return false;
+        if(ch == '.' && num_a.includes('.')) return false;
         num_a += ch;
     }else{
-        if(num_b.length == 1 && num_b[0] == '-' && ch == '-') return;
-        if(ch == '.' && num_b.includes('.')) return;
+        if(num_b.length == 1 && num_b[0] == '-' && ch == '-') return false;
+        if(ch == '.' && num_b.includes('.')) return false;
         num_b += ch;
     }
+    return true;
 }
 function calculate() {
     let result;
